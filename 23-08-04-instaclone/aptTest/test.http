@@ -1,0 +1,82 @@
+# 1. 회원가입
+POST http://localhost:8080/api/sign-up
+Content-Type: application/json
+
+{
+  "email" : "test2@naver.com",
+  "phone" : "010-1234-5678",
+  "password" : "1234",
+  "nickname" : "김코딩",
+  "profileIntro" : "내용",
+  "profilePhotoUrl" : "사진url",
+  "isDeleted" : false
+}
+
+###
+# 2. 로그인
+POST http://localhost:8080/api/login
+Content-Type: application/json
+
+{
+  "email" : "test@naver.com",
+  "password" : "1234"
+}
+
+###
+# 3. 비밀번호 재설정
+POST http://localhost:8080/api/password-reset
+Content-Type: application/json
+
+{
+  "email" : "test@naver.com",
+  "password" : "1234"
+}
+
+###
+# 4. 이메일 인증
+POST http://localhost:8080/api/email-auth
+Content-Type: application/json
+
+{
+  "email" : "test@naver.com"
+}
+
+###
+# 5. 팔로잉
+POST http://localhost:8080/api/following
+Content-Type: application/json
+
+{
+  "followerUserId" : "6",
+  "followingUserId" : "7"
+}
+
+###
+# 6. 팔로잉 리스트
+GET http://localhost:8080/api/following-list
+Content-Type: application/json
+
+{
+  "followerUserId" : "7",
+  "followingUserId" : "6"
+}
+
+###
+# 7. 팔로워 리스트
+GET http://localhost:8080/api/follower-list
+Content-Type: application/json
+
+{
+  "followerUserId" : "6",
+  "followingUserId" : "7"
+}
+
+###
+# 8. 팔로잉 혹은 팔로워 삭제
+POST http://localhost:8080/api/follow-delete
+Content-Type: application/json
+
+{
+  "followerUserId" : "7",
+  "followingUserId" : "6"
+}
