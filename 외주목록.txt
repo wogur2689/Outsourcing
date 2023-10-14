@@ -1,0 +1,4 @@
+외주목록
+대학과제 - JFrame, basket, oauth(Google), crud
+부트캠프 - login, signUp, chatting
+데이터 - melon, kakaostory, 29cm, gmaket
